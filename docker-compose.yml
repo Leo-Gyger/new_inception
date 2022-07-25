@@ -1,0 +1,8 @@
+services:
+  frontend:
+    build: src/mandatory/test
+    networks:
+      - frontend
+
+networks:
+  frontend: {}
