@@ -1,8 +1,15 @@
 services:
-  frontend:
-    build: src/mandatory/test
+  nginx:
+    ports:
+      - "443:443"
+    build: src/mandatory/nginx
     networks:
       - frontend
-
+  wordpress:
+    ports:
+      - "8080:8080"
+    build: src/mandatory/wordpress
+    networks:
+      - frontend
 networks:
   frontend: {}
